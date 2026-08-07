@@ -3,178 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juntos Contra o Bullying | Consciencia e Empatia</title>
+    <title>Combate ao Bullying</title>
     <style>
-        :root {
-            --primary: #4a90e2;
-            --secondary: #2c3e50;
-            --accent-good: #2ecc71;
-            --accent-bad: #e74c3c;
-            --bg: #f8f9fa;
-            --text: #333333;
-        }
-
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
         }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
         header {
-            background-color: var(--secondary);
+            background-color: #3b5998;
             color: white;
-            padding: 2rem 1rem;
             text-align: center;
+            padding: 2rem;
         }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+        nav {
+            background-color: #2d4373;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
         }
-
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #3b5998;
+            border-radius: 4px;
+        }
         .container {
-            max-width: 1000px;
+            max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
-
-        .banner-img {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
         section {
             background: white;
-            padding: 2rem;
-            border-radius: 8px;
             margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
-        h2 {
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 0.5rem;
+        h1, h2 {
+            margin-top: 0;
         }
-
-        ul, ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
+        ul {
+            padding-left: 1.5rem;
         }
-
         li {
             margin-bottom: 0.5rem;
         }
-
-        .comparison-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+        .img-placeholder {
+            background-color: #ddd;
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
             margin-top: 1rem;
+            border-radius: 4px;
+            font-weight: bold;
         }
-
-        @media (max-width: 768px) {
-            .comparison-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .card {
-            padding: 1.5rem;
-            border-radius: 6px;
-            color: white;
-        }
-
-        .card.good {
-            background-color: var(--accent-good);
-        }
-
-        .card.bad {
-            background-color: var(--accent-bad);
-        }
-
-        .card h3 {
-            margin-bottom: 0.5rem;
-        }
-
         footer {
             text-align: center;
-            padding: 2rem;
-            background-color: var(--secondary);
+            padding: 1rem;
+            background-color: #333;
             color: white;
-            margin-top: 4rem;
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Diga Nao ao Bullying</h1>
-        <p>Aprenda a identificar, evitar e construir relacoes mais seguras.</p>
+        <h1>Unidos Contra o Bullying</h1>
+        <p>Aprenda a identificar, combater e prevenir essa pratica</p>
     </header>
 
+    <nav>
+        <a href="#o-que-e">O que e</a>
+        <a href="#formas">Formas</a>
+        <a href="#como-evitar">Como Evitar</a>
+    </nav>
+
     <div class="container">
-        <!-- Imagem sobre apoio e combate ao bullying -->
-        <img src="https://unsplash.com" alt="Jovens unidos em circulo demonstrando apoio mutuo" class="banner-img">
 
-        <section>
-            <h2>O que e Bullying?</h2>
-            <p>O bullying e um comportamento agressivo, intencional e repetitivo, que ocorre sem motivacao evidente, praticado por um ou mais individuos contra outro. Ocorre uma desigualdade de poder, o que faz com que a vitima se sinta indefesa.</p>
-        </section>
-
-        <section>
-            <h2>Como Evitar o Bullying?</h2>
-            <p>A prevencao comeca com a atitude de cada um de nos. Veja como agir:</p>
-            <ul>
-                <li><strong>Cultive a empatia:</strong> Trate os outros como gostaria de ser tratado.</li>
-                <li><strong>Nao seja um espectador:</strong> Se ver alguem sofrendo bullying, nao ria e nao compartilhe. Defenda a vitima ou peca ajuda.</li>
-                <li><strong>Comunique os responsaveis:</strong> Avise professores, pais ou autoridades se presenciar agressoes fisicas ou verbais.</li>
-                <li><strong>Fortaleca o dialogo:</strong> Converse abertamente sobre sentimentos e respeite as diferencas individuais.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Como Saber se a Intencao e Boa ou Ruim?</h2>
-            <p>Nem sempre e facil identificar o que as pessoas querem de verdade. Analisar as atitudes ajuda a diferenciar o interesse genuino da manipulacao:</p>
-            
-            <div class="comparison-container">
-                <div class="card good">
-                    <h3>Sinais de Intencao Boa</h3>
-                    <ul>
-                        <li>Respeita os seus limites e o seu espaco.</li>
-                        <li>Diz a verdade, mesmo quando ela e dificil, mas com carinho.</li>
-                        <li>Fica feliz com as suas conquistas reais.</li>
-                        <li>Nao exige nada em troca para ajudar voce.</li>
-                    </ul>
-                </div>
-                
-                <div class="card bad">
-                    <h3>Sinais de Intencao Ruim</h3>
-                    <ul>
-                        <li>Disfarca criticas destrutivas como piada.</li>
-                        <li>Tenta afastar voce de outros amigos ou da familia.</li>
-                        <li>Muda de comportamento quando estao perto de outras pessoas.</li>
-                        <li>So procura voce quando precisa de algum favor ou vantagem.</li>
-                    </ul>
-                </div>
+        <section id="o-que-e">
+            <h2>O que e Bullying</h2>
+            <p>Bullying e uma palavra de origem inglesa utilizada para descrever atos de violencia fisica ou psicologica, intencionais e repetitivos. Esses atos sao praticados por um individuo ou grupo contra uma ou mais pessoas, com o objetivo de intimidar, humilhar ou agredir sem motivo evidente.</p>
+            <p>Essa pratica causa dor, anguistia e isolamento para a vitima, ocorrendo com frequencia em ambientes escolares, de trabalho e na internet.</p>
+            <div class="img-placeholder">
+                [ Imagem ilustrativa: Apoio social e uniao contra a intimidacao ]
             </div>
         </section>
+
+        <section id="forms">
+            <h2>Formas de Bullying</h2>
+            <p>O bullying pode se manifestar de diferentes maneiras no dia a dia. Conheca as principais:</p>
+            <ul>
+                <li><strong>Fisico:</strong> Socos, chutes, empurroes ou qualquer tipo de agressao corporal direta.</li>
+                <li><strong>Verbal:</strong> Apelidos pejorativos, insultos, xingamentos, piadas ofensivas e zoacoes constantes.</li>
+                <li><strong>Moral e Psicologico:</strong> Espalhar boatos falsos, excluir a vitima de grupos, ignorar, ameacar ou chantagear.</li>
+                <li><strong>Material:</strong> Estragar, quebrar, esconder ou roubar pertences da vitima.</li>
+                <li><strong>Cyberbullying:</strong> Violencia virtual atraves de redes sociais, mensagens de texto ou e-mails, compartilhando imagens ou textos para humilhar publicamente.</li>
+            </ul>
+            <div class="img-placeholder">
+                [ Imagem ilustrativa: Diferentes formas de interacao e alerta digital ]
+            </div>
+        </section>
+
+        <section id="como-evitar">
+            <h2>Como Evitar o Bullying</h2>
+            <p>A prevencao depende do esforco coletivo de alunos, pais, professores e da sociedade. Veja como agir:</p>
+            <ul>
+                <li><strong>Nao fique em silencio:</strong> Se voce for a vitima ou presenciar alguem sofrendo agressoes, denuncie imediatamente para um adulto de confianca.</li>
+                <li><strong>Pratique a empatia:</strong> Trate todas as pessoas com respeito, aceitando as diferencas individuais de cada um.</li>
+                <li><strong>Nao apoie o agressor:</strong> Nao ria de piadas ofensivas e nao compartilhe mensagens de humilhacao na internet.</li>
+                <li><strong>Crie redes de apoio:</strong> Acolha as pessoas que parecem isoladas ou tristes no seu circulo social.</li>
+                <li><strong>Promova o dialogo:</strong> Escolas devem debater o tema com frequencia para conscientizar sobre as consequencias dos atos.</li>
+            </ul>
+            <div class="img-placeholder">
+                [ Imagem ilustrativa: Grupo de jovens conversando e demonstrando respeito ]
+            </div>
+        </section>
+
     </div>
 
     <footer>
-        <p>&copy; 2026 - Campanha de Conscientizacao Contra o Bullying. Todos os direitos reservados.</p>
+        <p>Pagina criada para conscientizacao social. Todos contra o bullying.</p>
     </footer>
 
 </body>
