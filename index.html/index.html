@@ -3,166 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consciência Coletiva - Juntos Contra o Bullying</title>
-    <style>
-        :root {
-            --primary: #1e3a8a;
-            --primary-light: #3b82f6;
-            --text-dark: #1f2937;
-            --text-light: #f9fafb;
-            --bg-light: #f3f4f6;
-            --danger: #ef4444;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            color: var(--text-dark);
-            background-color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--primary);
-            color: var(--text-light);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--text-light);
-            text-decoration: none;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary-light);
-        }
-
-        .hero {
-            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.9)), url('https://unsplash.com') no-repeat center center/cover;
-            color: var(--text-light);
-            text-align: center;
-            padding: 6rem 1rem;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-
-        .btn {
-            background-color: var(--danger);
-            color: var(--text-light);
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #dc2626;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 1rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .card {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-light);
-        }
-
-        .card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        section h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .ajuda-section {
-            background-color: var(--bg-light);
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-
-        .ajuda-box {
-            max-width: 600px;
-            margin: 2rem auto 0;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background-color: var(--text-dark);
-            color: var(--text-light);
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 1rem; }
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1rem; }
-        }
-    </style>
+    <title>Juntos Contra o Bullying</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -181,30 +23,30 @@
 
     <section class="hero">
         <h1>Palavras machucam. O respeito cura.</h1>
-        <p>O bullying e o cyberbullying deixam marcas profundas. Romper o silêncio é o primeiro passo para construir um ambiente escolar e digital mais seguro e acolhedor para todos.</p>
+        <p>O bullying e o cyberbullying deixam marcas profundas. Romper o silêncio é o primeiro passo para construir um ambiente seguro e acolhedor para todos.</p>
         <a href="#ajuda" class="btn">Preciso de Ajuda Agora</a>
     </section>
 
     <main class="container" id="sobre">
         <section>
             <h2>Entendendo o Problema</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto;">Bullying é a prática de atos violentos, intencionais e repetitivos, contra uma pessoa indefesa, que podem causar danos físicos e psicológicos às vítimas. Não é "mimimi" ou brincadeira; é violência.</p>
+            <p class="intro-text">Bullying é a prática de atos violentos, intencionais e repetitivos, contra uma pessoa indefesa, que podem causar danos físicos e psicológicos. Não é brincadeira; é violência.</p>
         </section>
 
-        <section id="tipos" style="margin-top: 4rem;">
+        <section id="tipos" class="section-spacing">
             <h2>Formas Comuns de Bullying</h2>
             <div class="grid">
                 <div class="card">
                     <h3>Verbal</h3>
-                    <p>Insultos, apelidos pejorativos, piadas ofensivas, humilhações públicas e provocações constantes que destroem a autoestima da vítima.</p>
+                    <p>Insultos, apelidos pejorativos, piadas ofensivas, humilhações públicas e provocações constantes que destroem a autoestima.</p>
                 </div>
                 <div class="card">
-                    <h3>Físico e Material</h3>
-                    <p>Agressões físicas, empurrões, socos, além de roubo, vandalismo ou destruição de pertences pessoais da pessoa alvo.</p>
+                    <h3>Físico</h3>
+                    <p>Agressões físicas, empurrões, socos, além de vandalismo, roubo ou destruição de pertences pessoais da vítima.</p>
                 </div>
                 <div class="card">
                     <h3>Cyberbullying</h3>
-                    <p>Crueldade praticada em redes sociais, aplicativos de mensagens ou jogos online, como espalhar boatos, fotos expostas e ameaças virtuais.</p>
+                    <p>Crueldade praticada em redes sociais, apps de mensagens ou jogos online, como espalhar boatos e ameaças virtuais.</p>
                 </div>
             </div>
         </section>
@@ -212,17 +54,17 @@
 
     <section class="ajuda-section" id="ajuda">
         <h2>Você Não Está Sozinho</h2>
-        <p>Se você está sofrendo bullying ou presenciando alguém passar por isso, peça ajuda imediatamente.</p>
+        <p>Se você está sofrendo bullying ou presenciando isso, peça ajuda imediatamente.</p>
         <div class="ajuda-box">
             <h3>Canais de Apoio no Brasil</h3>
-            <p style="margin: 1rem 0;"><strong>CVV (Centro de Valorização da Vida):</strong> Ligue <strong>188</strong> (Disque gratuito, 24 horas) para apoio emocional.</p>
-            <p style="margin: 1rem 0;"><strong>Direitos Humanos:</strong> Disque <strong>100</strong> para denunciar violações de direitos de crianças e adolescentes.</p>
-            <p>Fale com professores, coordenadores, pais ou um adulto de sua total confiança. Ignorar o problema não o fará desaparecer.</p>
+            <p><strong>CVV (Apoio Emocional):</strong> Ligue <strong>188</strong> (Gratuito, 24h)</p>
+            <p><strong>Direitos Humanos:</strong> Disque <strong>100</strong> para denunciar violações contra menores.</p>
+            <p class="alerta">Fale com professores, coordenadores, pais ou um adulto de sua total confiança.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Projeto de Conscientização Contra o Bullying. Desenvolvido para transformar realidades.</p>
+        <p>&copy; 2026 Projeto de Conscientização Contra o Bullying.</p>
     </footer>
 
 </body>
