@@ -3,69 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juntos Contra o Bullying</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Juntos Contra o Bullying | Conscientização e Prevenção</title>
+    <style>
+        :root {
+            --primary-color: #3182ce;
+            --primary-dark: #2b6cb0;
+            --primary-light: #ebf8ff;
+            --text-color: #2d3748;
+            --text-light: #718096;
+            --bg-color: #f7fafc;
+            --white: #ffffff;
+            --accent-color: #e53e3e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Navegação */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--primary-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        }
+
+        /* Seções Principais */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Grid de Tipos de Bullying */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        /* Lista de Prevenção */
+        .prevention-list {
+            list-style: none;
+        }
+
+        .prevention-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .prevention-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Seção de Ajuda */
+        .help-section {
+            background-color: var(--primary-light);
+            border-radius: 8px;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .help-section h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .help-section p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contacts {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 6px;
+            min-width: 200px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .contact-card h4 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--text-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <div class="nav-container">
-            <a href="#" class="logo">💙 Contra o Bullying</a>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">O que é</a></li>
-                    <li><a href="#tipos">Tipos</a></li>
-                    <li><a href="#ajuda">Buscar Ajuda</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="nav-container">
+            <a href="#" class="logo">TodosContraOBullying</a>
+            <ul class="nav-menu">
+                <li><a href="#sobre">O que é</a></li>
+                <li><a href="#tipos">Tipos</a></li>
+                <li><a href="#evitar">Como Evitar</a></li>
+                <li><a href="#ajuda">Buscar Ajuda</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="hero">
-        <h1>Palavras machucam. O respeito cura.</h1>
-        <p>O bullying e o cyberbullying deixam marcas profundas. Romper o silêncio é o primeiro passo para construir um ambiente seguro e acolhedor para todos.</p>
-        <a href="#ajuda" class="btn">Preciso de Ajuda Agora</a>
-    </section>
-
-    <main class="container" id="sobre">
-        <section>
-            <h2>Entendendo o Problema</h2>
-            <p class="intro-text">Bullying é a prática de atos violentos, intencionais e repetitivos, contra uma pessoa indefesa, que podem causar danos físicos e psicológicos. Não é brincadeira; é violência.</p>
-        </section>
-
-        <section id="tipos" class="section-spacing">
-            <h2>Formas Comuns de Bullying</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Verbal</h3>
-                    <p>Insultos, apelidos pejorativos, piadas ofensivas, humilhações públicas e provocações constantes que destroem a autoestima.</p>
-                </div>
-                <div class="card">
-                    <h3>Físico</h3>
-                    <p>Agressões físicas, empurrões, socos, além de vandalismo, roubo ou destruição de pertences pessoais da vítima.</p>
-                </div>
-                <div class="card">
-                    <h3>Cyberbullying</h3>
-                    <p>Crueldade praticada em redes sociais, apps de mensagens ou jogos online, como espalhar boatos e ameaças virtuais.</p>
-                </div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bullying não é brincadeira. É hora de agir!</h1>
+                <p>Construir um ambiente seguro, acolhedor e baseado no respeito mútuo é responsabilidade de todos nós.</p>
+                <a href="#ajuda" class="cta-button">Preciso de Ajuda</a>
             </div>
         </section>
-    </main>
 
-    <section class="ajuda-section" id="ajuda">
-        <h2>Você Não Está Sozinho</h2>
-        <p>Se você está sofrendo bullying ou presenciando isso, peça ajuda imediatamente.</p>
-        <div class="ajuda-box">
-            <h3>Canais de Apoio no Brasil</h3>
-            <p><strong>CVV (Apoio Emocional):</strong> Ligue <strong>188</strong> (Gratuito, 24h)</p>
-            <p><strong>Direitos Humanos:</strong> Disque <strong>100</strong> para denunciar violações contra menores.</p>
-            <p class="alerta">Fale com professores, coordenadores, pais ou um adulto de sua total confiança.</p>
-        </div>
-    </section>
+        <div class="container">
+            <section id="sobre">
+                <h2>O que é Bullying?</h2>
+                <p>O bullying é uma prática de atos violentos, intencionais e repetidos, contra uma pessoa indefesa. Esses atos podem causar danos físicos e psicológicos severos às vítimas. Acontece frequentemente em ambientes escolares, mas também pode ocorrer no trabalho, na vizinhança e no ambiente digital.</p>
+            </section>
 
-    <footer>
-        <p>&copy; 2026 Projeto de Conscientização Contra o Bullying.</p>
-    </footer>
+            <section id="tipos">
+                <h2>Tipos de Bullying</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Verbal</h3>
+                        <p>Insultos, xingamentos, apelidos pejorativos e provocações constantes que afetam a autoestima da vítima.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Físico</h3>
+                        <p>Agressões diretas como empurrões, socos, pontapés ou o ato de roubar e quebrar pertences da pessoa.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Social ou Psicológico</h3>
+                        <p>Exclusão deliberada de grupos, ignorar a pessoa, espalhar boatos falsos e fazer ameaças.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Cyberbullying</h3>
+                        <p>Perseguição, humilhação e compartilhamento de conteúdos vexatórios ou falsos através da internet e redes sociais.</p>
+                    </div>
+                </div>
+            </section>
 
-</body>
-</html>
+            <section id="evitar">
+                <h2>Como Evitar e Combater</h2>
+                <ul class="prevention-list">
+                    <li><strong>Não seja um espectador passivo:</strong> Se você presenciar alguém sofrendo bullying, não ria e não ignore. Defenda a vítima se for seguro, ou procure um adulto imediatamente.</li>
+                    <li><strong>Promova a empatia:</strong> Coloque-se no lugar do outro e trate a todos com o respeito e a dignidade com que gostaria de ser tratado.</li>
+                    <li><strong>Comunique a escola ou empresa:</strong> As instituições de ensino e de trabalho devem ter canais claros e rígidos para relatar e punir esse tipo de comportamento.</li>
+                    <li><strong>Abra canais de diálogo em casa:</strong> Pais e responsáveis devem conversar abertamente com os jovens sobre respeito às diferenças e monitorar mudanças repentinas de comportamento.</li>
+                    <li><strong>Pense antes de compartilhar:</strong> Na internet, evite repassar mensagens, fotos ou piadas que possam ridicularizar ou ferir outra pessoa.</li>
+                </ul>
+            </section>
+
+            <section id="ajuda" class="help-section">
+                <h2>Você não está sozinho!</h2>
+                <p>Se você está sofrendo bullying ou conhece alguém que esteja passando por isso, quebre o silêncio. Falar sobre o problema é o primeiro passo para resolvê-lo.</p>
+                <div class="contacts">
+                    <div class="contact-card">
+                        <h4>Na Escola/Trabalho</h4>
